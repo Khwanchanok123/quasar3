@@ -16,6 +16,15 @@
       />
 
       <q-input
+      filled
+      v-model="name"
+      label="Your Name *"
+      hint="Name and Surname"
+      lazy-rules
+      :rules="[ val => val && val.length > 0 || 'Please type something']"
+    />
+
+      <q-input
         filled
         type="number"
         v-model="age"
@@ -27,6 +36,7 @@
         ]"
       />
 
+      
       <q-toggle v-model="accept" label="I accept the license and terms" />
 
       <div>
